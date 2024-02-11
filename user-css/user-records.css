@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --text-color: #f2f2f2;
+    --main-color: #EFA3C8;
+    --light-main: #FAD3E7;
+    --secondary-color: #0081B4;
+    --light-second: #01aaed;
+    --other: #2c3e50;
+    --success: #198754;
+    --light-success: #0dd157;
+    --danger: #DC3545;
+    --light-danger:  #f94658;
+  }
+
+main{
+    height: 100vh;
+    padding-top: 100px;
+    width: 100%;
+    transition: all 0.5s ease;
+    position: relative;
+    display: grid;
+    background-image: linear-gradient(rgba(7,9,30,0.7),rgba(7,9,30,0.7)),url(../Image/Animal-Bites.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-content{
+  display: grid;
+  height: 90%;
+  width: 90%;
+  padding: 20px;
+  background-color: var(--text-color);
+  border-radius: 20px;
+  overflow: auto;
+  position: relative;
+}
+
+#close-mark{
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 25px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+#close-mark:hover{
+  scale: 1.2;
+  transition: all ease 0.5s;
+}
+
+.box-content form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-label{
+  display: grid;
+  grid-template-rows: 25px auto;
+  font-size: 15px;
+}
+
+.form-label input, .form-label textarea{
+  padding: 0 10px;
+  height: 2.2rem;
+  border-radius: 20px;
+  border: 1px solid var(--light-second);
+  outline: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.form-label textarea{
+  height: auto;
+  resize: none;
+  padding-top: 5px;
+}
+
+.form-label p{
+  font-size: 12px;
+}
+
+span{
+  color: var(--danger);
+}
+
+.form-label label{
+  margin-left: 5px;
+}
+
+.box-content h2{
+  grid-column: span 2;
+  place-self: center;
+  margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .box-content form{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+

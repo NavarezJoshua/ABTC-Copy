@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --text-color: #f2f2f2;
+  --main-color: #EFA3C8;
+  --light-main: #FAD3E7;
+  --secondary-color: #0081B4;
+  --light-second: #01aaed;
+  --other: #2c3e50;
+  --bg-color: #e7f2fd;
+  --success: #198754;
+  --light-success: #0dd157;
+  --danger: #DC3545;
+  --light-danger:  #f94658;
+  --primary: #0275d8;
+  --light-primary: #208eef;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+/* MAIN */
+main{
+  /* FOR SIDEBAR SHOW*/
+  left: 220px;
+  width: calc(100% - 220px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+  /* END FOR SIDEBAR SHOW*/
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 100;
+  background: #e7f2fd;
+}
+
+.appointrecords-box{
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 80px auto;
+    padding: 10px;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    align-items: center;
+}
+.top h2{
+    font-size: 18px;
+}
+
+.top h3{
+    justify-self: end;
+    align-items: center;
+}
+
+.fillup{
+  margin-top: 20px;
+  height: auto;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20px;
+  padding: 5px 10px 0px;
+  background-color: #f2f2f2;
+}
+
+.fillup h1{
+    width: 100%;
+    text-align: center;
+}
+
+.fillup form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.fillup form .form-label{
+    display: grid;
+}
+
+.fillup form .form-label input, .fillup form .form-label select, .form-label textarea{
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--light-second);
+  font-size: 15px;
+}
+
+.form-label textarea{
+  padding-top: 5px;
+  border-radius: 10px;
+  resize: none;
+}
+
+.title{
+  padding-top: 10px;
+  grid-column: span 2;
+  text-transform: uppercase;
+}
+
+#animal{
+  align-items: start;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+#option{
+  width: 100%;
+}
+#doctor{
+    display: flex;
+    flex-direction: column;
+}
+
+#btn{
+  grid-column: span 2;
+  height: 2rem;
+  width: 30%;
+  justify-self: center;
+  margin: 30px 0;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--text-color);
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all ease 0.5s
+}
+
+#btn:hover{
+  background-color: var(--light-primary);
+  transition: all ease 0.5s;
+}

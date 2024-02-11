@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+:root{
+    --text-color: #f2f2f2;
+    --main-color: #EFA3C8;
+    --light-main: #FAD3E7;
+    --secondary-color: #0081B4;
+    --light-second: #01aaed;
+    --other: #2c3e50;
+    --success: #198754;
+    --light-success: #0dd157;
+    --danger: #DC3545;
+    --light-danger:  #f94658;
+  }
+
+.main-container{
+    height: calc(100% - 70px);
+    width: 100%;
+    transition: all 0.5s ease;
+    /* END FOR SIDEBAR SHOW*/
+    position: relative;
+    display: grid;
+    background: #e7f2fd;
+}
+
+section{
+    display: grid;
+    height: 100vh;
+}
+
+#Home{
+    background-color: #EFA3C8;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'left right';
+    padding: 20px;
+    background-image: linear-gradient(rgba(7,9,30,0.7),rgba(7,9,30,0.7)),url(../Image/Animal-Bites.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    grid-area: right;
+    height: 100%;
+    width: 90%;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+}
+
+.left{
+    align-self: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.left h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: white;
+}
+
+.left p{
+    font-size: 18px;
+    margin-right: 10px;
+    text-align: center;
+    height: 100%;
+    color: #fff;
+}
+
+.left li{
+    list-style: none;
+    align-self: center;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.left li a{
+    color: #f2f2f2;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all ease 0.5s;
+}
+
+.left li a:hover{
+    background-color: var(--light-second);
+    transition: all ease 0.5s;
+}
+/* RECORDS */
+
+#Records{
+    grid-template-rows: 40px auto;
+    background-image: linear-gradient(rgba(7,9,30,0.7),rgba(7,9,30,0.7)),url(../Image/Records.jpg);
+    padding-top: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+
+.table{
+    height: 70vh;
+    width: 90%;
+    place-self: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+    border: 1px solid #ccc; 
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: #fff; 
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px;
+    letter-spacing: 2px;
+    border: 1px solid #444;
+}
+
+td {
+    text-align: center;
+    font-weight: 500;
+    padding: 8px;
+    font-size: 12px; 
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: all ease 0.5s;
+}
+
+td a:hover{
+    color: var(--light-second);
+    transition: all ease 0.5s;
+}
+
+#show-modal{
+    font-size: 15px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    color: var(--light-second);
+}
+
+#show-modal:hover{
+    scale: 1.2;
+    transition: all ease 0.5s;
+}
+
+/* APPOINTMENT */
+#Appointment{
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 55px auto;
+    grid-template-areas: 'title title'
+        'form status';
+    width: 100%;
+    padding: 85px 10px 26px 10px;
+    background-image: linear-gradient(rgba(7,9,30,0.7),rgba(7,9,30,0.7)),url(../Image/Appointment.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Appointment .title{
+    grid-area: title;
+    position: relative;
+}
+
+.time{
+    position: absolute;
+    top: 7px;
+    right: 22px;
+    color: var(--other);
+    font-size: 20px;
+    background-color: var(--main-color);
+    padding: 3px 5px;
+    border-radius: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.title h1{
+    font-size: 2rem;
+}
+
+#Appointment .form{
+    grid-area: form;
+    height: 24rem;
+    display: grid;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+#Appointment form{
+    display: grid;
+    height: 22rem;
+    align-items: center;
+    padding-right: 6px;
+    align-items: start;
+}
+
+form .input{
+    width: 100%;
+    display: grid;
+}
+
+form .input label{
+    align-self: end;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+form input, textarea, select{
+    width: 100%;
+    padding: 0px 8px;
+    height: 2rem;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+form .input #fname,
+form .input #lname,
+form .input #cnum,
+form .input #mname{
+    color: white;
+    letter-spacing: 2px;
+}
+
+form textarea{
+    height: auto;
+    padding-top: 3px;
+    resize: none;
+}
+
+#btn-submit{
+    width: 100%;
+    padding: 6px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+#stats{
+    background-color: green;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+#btn-submit:hover{
+    background-color: var(--light-second);
+    transition: all ease 0.5s;
+}
+
+.status{
+    padding: 0px 20px;
+    min-width: 100px;
+}
+
+.status td{
+    color: var(--other);
+}
+
+@media screen and (max-width: 768px) {
+    #Records{
+        padding-top: 80px;
+    }
+    #Appointment{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 2fr auto;
+        grid-template-areas: 'title'
+                             'appoint'
+                             'status';
+        width: 100%;
+        height: auto;
+    }
+
+    #Appointment .title{
+        grid-area: title;
+        width: 100%;
+    }
+
+    #Appointment .title h1{
+        text-align: left;
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    #Appointment .title .time{
+        font-size: 12px;
+        top: 3px;
+        right: 0px;
+    }
+
+    #Appointment .form{
+        grid-area: appoint;
+        display: grid;
+        margin-top: 2px;
+        
+        height: 100%;
+        width: 100%;
+    }
+
+    #Appointment .status{
+        grid-area: status;
+        height: 100%;
+        margin-top: 20px;
+        width: 100%;
+        overflow: auto;
+        padding: 0px;
+    }
+
+    #Home{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        align-items: center;
+        grid-template-areas: 'top'
+        'bot';
+        padding-top: 100px;
+    }
+    img{
+        height: 80%;
+        grid-area: bot;
+    }
+    .left li{
+        place-self: center;
+        padding: 10px 0;
+    }
+}

@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --text-color: #f2f2f2;
+  --main-color: #EFA3C8;
+  --light-main: #FAD3E7;
+  --dark-light-main: #f3bbd8;
+  --secondary-color: #0081B4;
+  --light-second: #01aaed;
+  --other: #2c3e50;
+  --bg-color: #e7f2fd;
+  --success: #198754;
+  --light-success: #0dd157;
+  --danger: #DC3545;
+  --light-danger:  #f94658;
+  --primary: #0275d8;
+  --light-primary: #208eef;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+/* MAIN */
+main{
+  /* FOR SIDEBAR SHOW*/
+  left: 220px;
+  width: calc(100% - 220px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+  /* END FOR SIDEBAR SHOW*/
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 100;
+  background: #e7f2fd;
+}
+
+#view{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px;
+  place-items: center;
+}
+
+.box-view{
+    display: grid;
+    background-color: var(--dark-light-main);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+    width: 88%;
+    height: 88%;
+    overflow-y: auto;
+}
+
+#btn-back{
+    position: absolute;
+    top: 32px;
+    left: 13px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 8px 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-weight: 600;
+    font-size: 9px;
+}
+#btn-back:hover{
+    background-color: var(--light-second);
+    transition: all ease 0.5s;
+}
+
+h1{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--other);
+}
+
+form{
+    display: grid;
+    gap: 10px;
+}
+
+.input{
+    display: grid;
+    height: fit-content;
+}
+
+#remarks{
+  grid-column: span 2;
+}
+
+.input input, textarea, select{
+  padding: 0px 8px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--light-second);
+  font-weight: 600;
+  font-size: 14px;
+  height: 2.2rem;
+  opacity: 0.5;
+}
+
+#not-d{
+    background-color: var(--text-color);
+    opacity: 1;
+}
+
+.input label{
+    align-self: end;
+    font-weight: 700;
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+.input textarea{
+    resize: none;
+    height: auto;
+    padding-top: 5px;
+}
+
+.btn{
+    display: grid;
+    width: 100%;
+    grid-column: span 2;
+}
+
+
+.btn #btn-save{
+    place-self: center;
+    width: 40%;
+    padding: 6px;
+    margin: 19px 0px 5px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#btn-save:hover{
+    background-color: var(--light-second);
+    transition: all ease 0.5s;
+}

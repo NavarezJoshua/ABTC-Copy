@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --text-color: #f2f2f2;
+  --main-color: #EFA3C8;
+  --light-main: #FAD3E7;
+  --secondary-color: #0081B4;
+  --light-second: #01aaed;
+  --other: #2c3e50;
+  --success: #198754;
+  --light-success: #0dd157;
+  --danger: #DC3545;
+  --light-danger:  #f94658;
+  --primary: #0275d8;
+  --light-primary: #208eef;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* MAIN */
+main{
+  /* FOR SIDEBAR SHOW*/
+  left: 220px;
+  width: calc(100% - 220px);
+  transition: all 0.5s ease;
+  z-index: 1000;
+  /* END FOR SIDEBAR SHOW*/
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  z-index: 100;
+  background: #e7f2fd;
+}
+
+.appointment-box{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  grid-template-rows: 60px 22px auto;
+  gap: 15px;
+}
+
+.appointment-box h1{
+  place-self: center;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.table{
+  height: 78vh;
+  width: 95%;
+  padding: 10px;
+  justify-self: center;
+  border-radius: 10px;
+  overflow-x: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-top: 5px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  transition: all ease 0.5s;
+}
+
+th{
+  background-color: var(--main-color);
+  color: var(--text-color);
+  letter-spacing: 3px;
+  padding: 8px;
+  color: black;
+}
+
+td, th{
+  border: 1px solid var(--other);
+}
+
+th{
+  font-size: 16px;
+}
+
+td{
+  background-color: var(--light-main);
+  padding: 8px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+#btn-view, #btn-delete, #btn-add{
+  cursor: pointer;
+  font-size: 15px;
+  transition: all ease 0.5s;
+}
+
+#btn-delete{
+  margin-left: 5px;
+}
+
+#btn-add{
+  margin-right: 5px;
+  color: var(--primary);
+  display: none;
+}
+
+#btn-view:hover, #btn-delete:hover, #btn-add:hover{
+  scale: 1.2;
+  transition: all ease 0.5s;
+}
+
+#search{
+  align-items: start;
+  justify-self: start;
+  margin-left: 25px;
+  border-radius: 20px;
+  border: 1px solid var(--primary);
+  height: 2rem;
+  padding: 10px;
+  width: 15rem;
+  outline: none;
+}
+
+
+

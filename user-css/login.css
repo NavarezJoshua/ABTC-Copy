@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main-container{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #EFA3C8;
+}
+
+.Login{ 
+    background-color: #EFA3C8;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: grid;
+    column-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "Logo Form";
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    height: 22rem;
+}
+
+.left-side{
+    grid-area: Logo;
+    display: grid;
+    background-color: #0081B4;
+    place-items: center;
+}
+
+.left-side img{
+    height: 300px;
+}
+
+.right-side {
+    grid-area: Form;
+    background-color: #0081B4;
+    display: grid;
+    grid-template-rows: 80px 2fr;
+}
+
+.right-side h1{
+    color: #f2f2f2;
+    font-size: 40px;
+    letter-spacing: 5px;
+    cursor: default;
+    align-self: end;
+    justify-self: center;
+}
+
+.right-side h1 span{
+    color: #EFA3C8;
+}
+
+.log-form{
+    display: grid;
+    width: 100%;
+    padding: 5px;
+    margin-top: 23px;
+}
+
+.right-side .form{
+   padding: 10px;
+   position: relative;
+}
+
+.form i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #EFA3C8;
+}
+
+.form #open_pass{
+    display: none;
+}
+
+#open_pass, #close_pass{
+    cursor: pointer;
+}
+
+.right-side .form ::placeholder{
+    color: #f2f2f2;
+}
+
+p{
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.right-side .form input{
+    padding: 0px 10px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid #FAD3E7;
+    background-color: #0081B4;
+    color: #f2f2f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.right-side .form input:hover{
+    border-bottom: 2px solid #EFA3C8;
+    transition: 0.5s;
+}
+
+.right-side .form input:focus{
+    outline: none;
+    border-bottom: 2px solid #EFA3C8;
+}
+
+.right-side .Register{
+    margin-left: 12px;
+    color: #f2f2f2;
+    font-size: 12px;
+}
+
+.right-side .Register a{
+    color: #FAD3E7;
+}
+
+.right-side .Register a:hover{
+    color: #EFA3C8;
+    transition: 0.5s;
+}
+
+.log-btn{
+    display: grid;
+    width: 100%;
+    margin: 20px 0px;
+    place-items: center;
+    height: 20%;
+}
+.right-side .log-btn input[type=submit]{
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #FAD3E7;
+    border: none;
+    transition: all ease 0.5s;
+    font-size: 12px;
+    height: 2rem;
+    width: 80%;
+}
+
+.right-side .log-btn input[type=submit]:hover{
+    background-color: #EFA3C8;
+    transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 946px){
+    .Login{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'center';
+        max-width: 80%;
+        min-width: 200px;
+    }
+    .left-side{
+        display: none;
+    }
+    .right-side{
+        grid-area: center;
+        min-width: 100px;
+    }
+}
